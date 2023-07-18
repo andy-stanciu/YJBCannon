@@ -1,0 +1,194 @@
+name: YJBCannon
+version: ${project.version}
+main: me.yjb.yjbcannon.YJBCannon
+api-version: 1.8
+authors: [yJb]
+description: yJb's cannon core.
+website: Discord | ! yJb#0001
+depend: [PlaceholderAPI, ProtocolLib, WorldEdit, PlotSquared]
+commands:
+  yjbcannonreload:
+    description: Reloads the config.
+    usage: /yjbcannonreload
+    aliases: [yjbreload, yjbr]
+  tickcounter:
+    description: Gives a tick counter.
+    usage: /tickcounter
+    aliases: [tc]
+  nodetickcounter:
+    description: Gives a node tick counter.
+    usage: /nodetickcounter
+    aliases: [ntc, nc, nodecounter]
+  tntfill:
+    description: Fills dispensers with tnt in a radius.
+    usage: /tntfill
+    aliases: [tf]
+  tntclear:
+    description: Clears dispensers of tnt in a radius.
+    usage: /tntclear
+    aliases: [tntunfill, unfill]
+  bone:
+    description: Gives a stack remover.
+    usage: /bone
+    aliases: [stackremover]
+  walls:
+    description: Generates walls with a given width and type.
+    usage: /walls <amount> <width> <cobble/obsidian>
+  undowalls:
+    description: Undoes the most recent wall generation.
+    usage: /undowalls
+    aliases: [wallsundo, /undowalls]
+  magicsand:
+    description: Gives player magic sand block.
+    usage: /magicsand
+    aliases: [ms]
+  refill:
+    description: Updates nearby magic sand blocks to start spawning sand if they were world-editted in.
+    usage: /refill
+    aliases: [rf]
+  magicclear:
+    description: Clears all of your magic blocks in case you forgot where they are.
+    usage: /magicclear
+    aliases: [mc, clearmagic, mclear, mreset, magicreset, msc, msclear]
+  fire:
+    description: Presses your last button.
+    usage: /fire
+    aliases: [button, shoot, f]
+  lever:
+    description: Flicks your last lever.
+    usage: /lever
+    aliases: [flick, l]
+  features:
+    description: Displays a list of the plugin's features.
+    usage: /features
+    aliases: [/features, changelog]
+  upload:
+    description: Gives the URL for FAWE schematic uploading.
+    usage: /upload
+    aliases: [/upload]
+  calc:
+    description: Evaluates a mathematical expression.
+    usage: /calc <expression>
+    aliases: [calculate, eval, compute, solve]
+  chunkloader:
+    description: Gives a chunk loader.
+    usage: /chunkloader
+    aliases: [cl]
+  chunkloaderclear:
+    description: Clears all of your chunk loaders in case you forgot where they are.
+    usage: /chunkloaderclear
+    aliases: [clclear, clc, cc]
+  chunkloaders:
+    description: Displays locations of all of your chunk loaders.
+    usage: /chunkloaders
+    aliases: [cls, cllist, clinfo, chunkloaderlist, chunkloaderinfo]
+  buildhelper:
+    description: Toggles build helper.
+    usage: /buildhelper
+    aliases: [bh]
+  voidblock:
+    description: Gives a void block.
+    usage: /voidblock
+    aliases: [vb]
+  voidclear:
+    description: Clears all of your void blocks in case you forgot where they are.
+    usage: /vbclear
+    aliases: [vbclear, vbc, voidc, vclear, voidreset, vreset, clearvoid]
+  water:
+    description: Waters nearby dispensers for your cannon.
+    usage: /water
+    aliases: [watercannon, waterdisp, waterdispensers]
+  block36:
+    description: Gives placeable block-36.
+    usage: /block36
+    aliases: [b36, pistonhead]
+  regenwall:
+    description: Gives a regen wall.
+    usage: /regenwall
+    aliases: [regenwalls, regen, regens, regenblock, rw]
+  wire:
+    description: Wires a world edit selection with user preferences.
+    usage: /wire
+  multi:
+    description: Gives a multi dispenser with a given amount, delay, and type
+    usage: /multi <amount> <delay in GT> <tnt/sand>
+    aliases: [multidispenser, multitnt, multisand]
+  corner:
+    description: Teleports you to your specified plot corner.
+    usage: /corner <+/-> <+/->
+    aliases: [plotcorner, cornerplot]
+  clearentities:
+    description: Clears all entities in a radius.
+    usage: /clearentities
+    aliases: [ce, entityclear]
+permissions:
+  yjbcannon.admin:
+    description: Permission to use features in other plots.
+  yjbcannon.reload:
+    description: Permission to use /yjbr.
+  yjbcannon.features:
+    description: Permission to use /features.
+  yjbcannon.upload:
+    description: Permission to use /upload.
+  yjbcannon.tickcounter.use:
+    description: Permission to use /tickcounter.
+  yjbcannon.stackremover.use:
+    description: Permission to use /bone.
+  yjbcannon.walls.use:
+    description: Permission to use /walls.
+  yjbcannon.walls.undowalls:
+    description: Permission to use /undowalls.
+  yjbcannon.walls.bypass.cooldown:
+    description: Permission to bypass /walls cooldown.
+  yjbcannon.walls.bypass.size:
+    description: Permission to bypass size restriction on /walls.
+  yjbcannon.magicsand.use:
+    description: Permission to use magic sand blocks.
+  yjbcannon.magicsand.register:
+    description: Permission to register magic sand blocks.
+  yjbcannon.magicsand.clear:
+    description: Permission to clear magic sand blocks.
+  yjbcannon.magicsand.bypass:
+    description: Permission to bypass magic sand limit.
+  yjbcannon.remotefire.button:
+    description: Permission to use /fire.
+  yjbcannon.remotefire.lever:
+    description: Permission to use /lever.
+  yjbcannon.tntfill.use:
+    description: Permission to use /tntfill.
+  yjbcannon.tntclear.use:
+    description: Permission to use /tntclear.
+  yjbcannon.calc:
+    description: Permission to use /calc.
+  yjbcannon.chunkloader.use:
+    description: Permission to use chunk loaders.
+  yjbcannon.chunkloader.clear:
+    description: Permission to clear loaded chunks.
+  yjbcannon.chunkloader.bypass:
+    description: Permission to bypass chunk loader limit.
+  yjbcannon.buildhelper.use:
+    description: Permission to use /buildhelper.
+  yjbcannon.voidblock.use:
+    description: Permission to use /voidblock.
+  yjbcannon.voidblock.bypass:
+    description: Permission to bypass void block limit.
+  yjbcannon.voidblock.clear:
+    description: Permission to clear void blocks.
+  yjbcannon.water.use:
+    description: Permission to use /water.
+  yjbcannon.nodetickcounter.use:
+    description: Permission to use /nodetickcounter.
+  yjbcannon.block36.use:
+    description: Permission to use /block36.
+  yjbcannon.regenwall.use:
+    description: Permission to use /regenwall.
+  yjbcannon.wire.use:
+    description: Permission to use /wire.
+  yjbcannon.multi.use:
+    description: Permission to use /multi.
+  yjbcannon.corner.use:
+    description: Permission to use /corner.
+  yjbcannon.entityride.use:
+    description: Permission to ride entities.
+  yjbcannon.clearentities.use:
+    description: Permission to use /ce.

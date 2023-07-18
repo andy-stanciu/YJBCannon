@@ -1,0 +1,244 @@
+##############################################################
+#              _ _        _____                              #
+#            | | |      / ____|                              #
+#  _   _     | | |__   | |     __ _ _ __  _ __   ___  _ __   #
+# | | | |_   | | '_ \  | |    / _` | '_ \| '_ \ / _ \| '_ \  #
+# | |_| | |__| | |_) | | |___| (_| | | | | | | | (_) | | | | #
+#  \__, |\____/|_.__/   \_____\__,_|_| |_|_| |_|\___/|_| |_| #
+#   __/ |                                                    #
+#  |___/                                                     #
+##############################################################
+
+############################
+# YJB CANNON v${version} by yJb #
+############################
+
+auto-update: true
+
+#Will only allow commands if plot-access value returns true through PlaceholderAPI
+#Ensure you have PlaceholderAPI v2.10.6 for the PlotSquared placeholders to work
+plot-access: '%plotsquared_has_build_rights%'
+
+tnt-enabled-worlds:
+  - 'plots'
+
+#Toggles to enable/disable specific modules
+#The server must be restarted to apply these toggles
+toggles:
+  enable-protection-blocks: true
+  enable-unbreakable-blocks: true
+  disable-dispenser-drops: true
+  enable-tick-counter: true
+  enable-stack-remover: true
+  enable-magic-sand: true
+  enable-remote-fire: true
+  enable-water-protect: true
+  enable-chunk-loader: true
+  enable-build-helper: true
+  enable-void-block: true
+  enable-node-tick-counter: true
+  enable-wall-generator: true
+  enable-calculator: true
+  enable-water-cannon: true
+  enable-tntfill: true
+  enable-block-36: true
+  enable-regen-wall: true
+  enable-wire: true
+  enable-multi-dispenser: true
+  enable-plot-corner: true
+  enable-entity-ride: true
+  enable-clear-entities: true
+
+#Module config
+chunkloader:
+  chunk-loader: 'BEACON'
+  chunk-loader-limit: 16
+  chunk-loader-radius: 2
+magicsand:
+  magic-block: 'SEA_LANTERN'
+  magic-block-limit: 128
+  register-radius: 32
+  set-blocks-to-sand-instead-of-spawning-sand: false
+  speed: 0.05
+#Disable clearing of snowball entities (all projectiles) for void blocks to work properly
+voidblock:
+  void-block: 'COAL_BLOCK'
+  void-block-limit: 8
+water:
+  water-radius: 64
+protectionblocks:
+  prot-block: 'EMERALD_BLOCK'
+  unbreakable-block: 'DIAMOND_BLOCK'
+tntfill:
+  fill-radius: 64
+tntclear:
+  clear-radius: 64
+regenwall:
+  type: 'GOLD_BLOCK'
+  regen-speed: 1.0
+  regen-wall-limit: 16
+wire:
+  max-width: 64
+  max-height: 64
+  check-for-border: true
+multidispenser:
+  max-entities-dispensed: 256
+  max-delay: 320
+  max-fuse: 80
+clearentities:
+  clear-radius: 64
+wallgenerator:
+  max-wall-count: 100
+  max-wall-width: 50
+  cooldown: 30
+  check-for-border: true
+  allowed-materials:
+    - 'OBSIDIAN'
+    - 'COBBLESTONE'
+    - 'SAND'
+    - 'STONE'
+    - 'DIRT'
+    - 'GLOWSTONE'
+    - 'GLASS'
+waterprotect:
+  unbreakable:
+    - 'REDSTONE_COMPARATOR'
+    - 'REDSTONE_COMPARATOR_OFF'
+    - 'REDSTONE_COMPARATOR_ON'
+    - 'REDSTONE_TORCH_OFF'
+    - 'REDSTONE_TORCH_ON'
+    - 'REDSTONE_WIRE'
+    - 'DIODE'
+    - 'DIODE_BLOCK_OFF'
+    - 'DIODE_BLOCK_ON'
+    - 'REDSTONE'
+    - 'STONE_BUTTON'
+    - 'LEVER'
+    - 'CARPET'
+
+#Chat and other lang config
+lang:
+  theme-color: 'GREEN'
+  accent-color: 'DARK_GREEN'
+  chat-prefix1: 'YJB'
+  chat-prefix2: 'Cannon'
+  no-perms: 'You do not have sufficient permissions.'
+  upload-message: '&a&lWebsite: &f&ohttps://athion.net/fawe/'
+  features-list:
+    - '&2-&aTick Counter &8 | &f&o/tc'
+    - '&2-&aNode Tick Counter &8 | &f&o/ntc'
+    - '&2-&aStack Remover &8 | &f&o/bone'
+    - '&2-&aMagic Sand &8 | &f&o/ms, clear with /magicclear (/mc), refill with /refill'
+    - '&2-&aChunk Loader &8 | &f&o/cl, info with /chunkloaders, clear with /clclear'
+    - '&2-&aWall Generator &8 | &f&o/walls <amount> <width> <material>'
+    - '&2-&aBuild Helper &8 | &f&o/bh, assists with slab and glowstone placement'
+    - '&2-&aVoid Block &8 | &f&o/vb, clear with /vbclear (/vbc)'
+    - '&2-&aWater &8 | &f&o/water, waters your cannon'
+    - '&2-&aRemote Button &8 | &f&o/fire'
+    - '&2-&aRemote Lever &8 | &f&o/lever'
+    - '&2-&aTNT Fill &8 | &f&o/tntfill (/tf), clear with /tntclear'
+    - '&2-&aPlaceable Block 36 &8 | &f&o/block36'
+    - '&2-&aAuto Wire Dispensers &8 | &f&o/wire'
+    - '&2-&aMulti Dispensers &8 | &f&o/multi'
+    - '&2-&aSelf Regenerating Walls | &f&o/regenwall'
+    - '&2-&aClear Entities | &f&o/ce'
+    - '&2-&aEntity Ride | &f&osaddle'
+    - '&2-&aPlot Corner | &f&o/corner <+/-> <+/->'
+    - '&2-&aSchematic Upload &8 | &f&o/upload'
+    - '&2-&aProtection Blocks &8 | &f&oemerald block'
+    - '&2-&aUnbreakable Blocks &8 | &f&odiamond block'
+    - '&2-&aCalculator &8 | &f&o/calc'
+  tickcounter-receive: 'You have been given a tick counter!'
+  tickcounter-increment: '&a(%yjbcannon_tickcounter_delay%) &fGT: &a%yjbcannon_tickcounter_gt%&f, RT: &a%yjbcannon_tickcounter_rt%&f, S: &a%yjbcannon_tickcounter_seconds%&f, PR: &a%yjbcannon_tickcounter_priority%&f'
+  nodetickcounter-receive: 'You have been given a node tick counter!'
+  nodetickcounter-set-origin: 'You have set your origin node!'
+  nodetickcounter-add-node: 'You have added the node <node-name>!'
+  nodetickcounter-remove-node: 'You have removed the node <node-name>!'
+  nodetickcounter-no-nodes: 'You have not added any nodes!'
+  nodetickcounter-cleared-nodes: 'You have cleared all of your nodes!'
+  nodetickcounter-node-powered: 'The node <node-name> was ticked off after <gt> GT (<rt> RT, <sec> S)!'
+  stackremover-receive: 'You have been given a stack remover!'
+  stackremover-remove: 'The stack has been removed!'
+  stackremover-heal: 'The wall has been healed!'
+  wallgenerator-generate: 'Generated &a%yjbcannon_wallgenerator_count% %yjbcannon_wallgenerator_width%&f-wide &a%yjbcannon_wallgenerator_type% &fwall%yjbcannon_wallgenerator_plural%! Undo with &f&o/undowalls'
+  wallgenerator-usage: 'Usage: /walls <amount> <width> <material>'
+  wallgenerator-undo: 'Successfully undid your most recent wall generation!'
+  wallgenerator-wall-limit: 'You are not permitted to generate more than 100 walls.'
+  wallgenerator-too-close-to-border: 'Unable to generate walls, you are too close to your plot border.'
+  wallgenerator-width-limit: 'You are not permitted to generate walls that are more than 20 wide.'
+  wallgenerator-on-cooldown: 'You are on cooldown to generate walls for the next %yjbcannon_wallgenerator_cooldown% seconds.'
+  magicsand-reached-limit: 'You have reached the limit of %yjbcannon_magicsand_limit% magic blocks.'
+  magicsand-give: 'You have been given a magic sand block!'
+  magicsand-registered-blocks: 'You have registered &a%yjbcannon_magicsand_blocks_registered% &fmagic blocks!'
+  magicsand-found-no-blocks: 'Did not find any magic blocks nearby.'
+  magicsand-removed-blocks: 'Removed &a%yjbcannon_magicsand_blocks_removed% &fmagic blocks!'
+  remotefire-button-fire: 'Fired!'
+  remotefire-button-removed: 'Your button was recently removed.'
+  remotefire-button-notfound: 'You have not recently pressed a button.'
+  remotefire-lever-flick: 'Flicked %yjbcannon_remotefire_lever_state%&f!'
+  remotefire-lever-removed: 'Your lever was recently removed.'
+  remotefire-lever-notfound: 'You have not recently flicked a lever.'
+  tntfill-not-found: 'No dispensers were found nearby.'
+  tntfill-fill: '&fFilled &a%yjbcannon_tntfill_count% &fdispensers!'
+  tntclear-clear: '&fCleared &a%yjbcannon_tntclear_count% &fdispensers!'
+  chunkloader-receive: 'You have been given a chunk loader!'
+  chunkloader-place: 'You have placed a chunk loader, loading all chunks in a <chunkloader-radius> chunk radius! (&a%yjbcannon_chunkloader_count%&f/16)'
+  chunkloader-reached-limit: 'You have reached the limit of %yjbcannon_chunkloader_limit% chunk loaders.'
+  chunkloader-exists: 'This chunk is already loaded!'
+  chunkloader-clear: 'Removed &a%yjbcannon_chunkloader_count% &fchunk loaders!'
+  chunkloader-not-placed: 'You have not placed any chunk loaders!'
+  calculator-error: 'Invalid syntax.'
+  buildhelper-toggle: 'You have %yjbcannon_buildhelper_state% &fbuild helper!'
+  voidblock-receive: 'You have been given a void block!'
+  voidblock-place: 'You have place a void block! (&a%yjbcannon_voidblock_count%&f/%yjbcannon_voidblock_limit%)'
+  voidblock-clear: 'Removed &a%yjbcannon_voidblock_blocks_removed% &fvoid blocks!'
+  voidblock-reached-limit: 'You have reached the limit of %yjbcannon_voidblock_limit% void blocks.'
+  water-watered-cannon: 'Your cannon has been watered!'
+  block36-receive: 'You have been given placeable block-36!'
+  regenwall-reached-limit: 'You have reached the limit of %yjbcannon_regenwall_limit% regen walls.'
+  regenwall-receive: 'You have been given a regen wall!'
+  wire-no-selection: 'You have not made a selection yet.'
+  wire-selection-cannot-be-wired: 'Your selection could not be wired.'
+  wire-wired-selection: 'Your selection has been wired!'
+  wire-too-close-to-border: 'Unable to wire your selection, it is too close to your plot border.'
+  cleared-entities: 'Cleared <count> entities in a <radius> block radius!'
+
+###############
+# PERMISSIONS #
+###############
+
+# yjbcannon.
+# yjbcannon.reload
+# yjbcannon.features
+# yjbcannon.upload
+# yjbcannon.calc
+# yjbcannon.tickcounter.use
+# yjbcannon.stackremover.use
+# yjbcannon.walls.use
+# yjbcannon.walls.undowalls
+# yjbcannon.walls.bypass.cooldown
+# yjbcannon.walls.bypass.size
+# yjbcannon.magicsand.use
+# yjbcannon.magicsand.register
+# yjbcannon.magicsand.clear
+# yjbcannon.magicsand.bypass
+# yjbcannon.remotefire.button
+# yjbcannon.remotefire.lever
+# yjbcannon.tntfill.use
+# yjbcannon.tntclear.use
+# yjbcannon.chunkloader.use
+# yjbcannon.chunkloader.clear
+# yjbcannon.chunkloader.bypass
+# yjbcannon.buildhelper.use
+# yjbcannon.voidblock.use
+# yjbcannon.voidblock.bypass
+# yjbcannon.voidblock.clear
+# yjbcannon.water.use
+# yjbcannon.nodetickcounter.use
+# yjbcannon.block36.use
+# yjbcannon.regenwall.use
+# yjbcannon.wire.use
+# yjbcannon.multi.use
+# yjbcannon.corner.use
+# yjbcannon.entityride.use
+# yjbcannon.clearentities.use
