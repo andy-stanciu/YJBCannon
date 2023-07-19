@@ -1,7 +1,9 @@
 # YJBCannon
 ## About
 YJBCannon is an open-source Spigot plugin for Minecraft 1.8.x that provides all the necessary "cannoning" features one would need on their server. 
-YJBCannon was originally a paid plugin that was made free and open-source for accessibility reasons. This decision was also made in consideration of the deprecated 1.8 Spigot API and declining demand for such a product. The plugin is not actively maintained by its creator, Andy Stanciu (alias yJb), however contributing will still remain open to the public and pull requests will be reviewed on a somewhat active basis.
+YJBCannon was originally a paid plugin that was made free and open-source for accessibility reasons. This decision was also made in consideration of the deprecated 1.8 Spigot API and declining demand for such a product. The plugin is not actively maintained by its creator, Andy Stanciu (alias yJb), however contributing will still remain open to the public and pull requests will be reviewed on a somewhat active basis[^1].
+
+[^1]: Disclaimer: YJBCannon is poorly written and designed by my standards (or any decent standards from a code style and efficiency standpoint for that matter). So, although it is functional, it is by no means optimal nor well-architected, documented, and up-to-date code. The majority of the code was written in 2020-21, during which I was very much still in the process of learning.
 ## Download
 See releases. Newest version is 2.3.3. YJBCannon Server Setup is also included in the releases (all-inclusive, configurated cannon server setup to run a cannon realm on a 1.8.x Spigot Server).
 ## Dependencies
